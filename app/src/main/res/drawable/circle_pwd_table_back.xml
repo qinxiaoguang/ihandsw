@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--被选中的样式-->
+    <item android:state_selected="true">
+        <shape>
+            <corners android:radius="100dp" />
+            <stroke android:color="@color/black" android:width="0.5dp"></stroke>
+        </shape>
+    </item>
+    <!--获取焦点样式-->
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="100dp" />
+            <stroke android:color="@color/black" android:width="0.5dp"></stroke>
+        </shape>
+    </item>
+    <!--点击样式-->
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="100dp" />
+            <stroke android:color="@color/black" android:width="0.5dp"></stroke>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="@color/pwd_table_color" />
+            <corners android:radius="100dp" />
+            <stroke android:color="@color/ccc" android:width="0.5dp"></stroke>
+        </shape>
+    </item>
+</selector>

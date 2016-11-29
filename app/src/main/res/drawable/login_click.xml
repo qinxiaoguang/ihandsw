@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--被选中的样式-->
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/login_input_click" />
+        </shape>
+    </item>
+    <!--获取焦点样式-->
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/login_input_click" />
+            <stroke android:width="0dp" />
+        </shape>
+    </item>
+    <!--点击样式-->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/login_input_click" />
+        </shape>
+    </item>
+    <!--不可点击样式-->
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/ccc" />
+            <stroke android:width="0dp" />
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+    <!--默认显示-->
+    <item>
+        <shape>
+            <solid android:color="@color/login_btn" />
+            <stroke android:width="0dp" />
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+
+</selector>

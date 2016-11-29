@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.qxg.ihandsw"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 2
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        preDexLibraries = false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("ihandsw.jks")
+            storePassword "a123456"
+            keyAlias "ihandsw"
+            keyPassword "a123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/jsoup-1.10.1.jar')
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.google.dagger:dagger:2.4'
+    //compile 'org.glassfish:javax.annotation:10.0-b2 8'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'com.roger.catloadinglibrary:catloadinglibrary:1.0.1'
+    compile 'com.android.support:cardview-v7:25.0.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.google.dagger:dagger-compiler:2.4'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+    compile 'com.github.XunMengWinter:CircularAnim:0.3.4'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+    compile 'com.roger.catloadinglibrary:catloadinglibrary:1.0.1'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.6.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile(name: 'securityguardaar3-5.1.81', ext: 'aar')
+    compile(name: 'alisdk-feedback-release', ext: 'aar')
+    compile files('libs/app-monitor-sdk-2.5.1.1_for_bc_proguard.jar')
+    compile files('libs/utdid4all-1.1.5.3_proguard.jar')
+    compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    compile files('libs/umeng_social_view.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/SocialSDK_umengwx.jar')
+    compile files('libs/SocialSDK_umengqq.jar')
+    compile project(':umeng_community_simplify_library_project')
+    compile project(':PushSDK')
+}

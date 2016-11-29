@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/input_balance_layout"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:gravity="center"
+            android:padding="2dp"
+            android:id="@+id/trans_fee"
+            android:hint="请输入转账金额"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:clickable="false"
+            android:background="@drawable/login_edit_back"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/balance_err_msg"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:src="@drawable/right"
+            android:scaleType="fitCenter"
+            android:padding="16dp"
+            android:theme="@style/ConfirmBtn"
+            android:id="@+id/confirm_balance"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:alpha="0"
+        android:id="@+id/input_pwd_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/err_msg"
+            android:visibility="gone"
+            android:text="转账失败"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/pwd_edit"
+            android:background="@drawable/login_edit_back"
+            android:inputType="textPassword"
+            android:hint="请使用下方键盘输入查询密码"
+            android:textSize="14sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+        <RelativeLayout
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/load_pwd_table_progress"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:id="@+id/load_pwd_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img0"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img1"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img2"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img3"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img6"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img7"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img8"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:src="@drawable/quit"
+                            android:id="@+id/img_quit"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img9"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_pwd_table_width">
+                        <ImageView
+                            android:padding="@dimen/card_pwd_table_btn_padding"
+                            android:id="@+id/img_back"
+                            android:src="@drawable/back"
+                            android:background="@drawable/circle_pwd_table_back"
+                            android:layout_width="@dimen/card_pwd_table_width"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/card_pwd_table_width" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <Button
+                android:id="@+id/confirm_trans_btn"
+                android:text="确认"
+                android:theme="@style/ConfirmBtn"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+            <ProgressBar
+                android:visibility="gone"
+                android:elevation="100dp"
+                android:id="@+id/confirm_loading"
+                android:layout_centerInParent="true"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

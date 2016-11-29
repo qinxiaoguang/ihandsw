@@ -1,0 +1,196 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:src="@drawable/bp1"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+                            <RelativeLayout
+                                android:layout_marginBottom="@dimen/card_margin"
+                                android:transitionName="card1"
+                                android:id="@+id/card_layout"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_marginRight="@dimen/card_margin"
+                                android:background="@color/card1"
+                                android:theme="@style/Card1CommonClick"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:src="@drawable/card"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp" />
+
+                                    <TextView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:text="一卡通"
+                                        android:layout_marginLeft="5dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_marginLeft="@dimen/card_margin"
+                                android:layout_marginBottom="@dimen/card_margin"
+                                android:id="@+id/library_layout"
+                                android:layout_weight="1"
+                                android:theme="@style/Card2CommonClick"
+                                android:background="@color/card2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:src="@drawable/library"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp" />
+                                    <TextView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:text="图书馆"
+                                        android:layout_marginLeft="5dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+                            <RelativeLayout
+                                android:layout_marginRight="@dimen/card_margin"
+                                android:layout_marginTop="@dimen/card_margin"
+                                android:id="@+id/small_tool"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:background="@color/card3"
+                                android:theme="@style/Card3CommonClick"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:src="@drawable/educ"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp" />
+                                    <TextView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:text="工具汇"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="5dp"
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_marginLeft="@dimen/card_margin"
+                                android:layout_marginTop="@dimen/card_margin"
+                                android:id="@+id/forum_layout"
+                                android:layout_weight="1"
+                                android:theme="@style/Card4CommonClick"
+                                android:background="@color/card4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:src="@drawable/white_forum"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp" />
+                                    <TextView
+                                        android:clickable="false"
+                                        android:background="@null"
+                                        android:text="话山威"
+                                        android:layout_marginLeft="5dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

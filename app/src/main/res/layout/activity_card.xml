@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qxg.ihandsw.view.Card.Impl.CardActivity">
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:orientation="vertical"
+        android:transitionName="card1"
+        android:background="@color/card1"
+        android:paddingTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:titleTextColor="@color/black"
+            android:layout_height="?attr/actionBarSize">
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="#f7f7f7"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="8dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="72dp">
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/loading_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/info_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:background="@drawable/circle_back"
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:text="秦"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/name"
+                        android:text="秦晓光"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:textColor="@color/black"
+                        android:text="校园卡余额：12.3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/card_fee"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/card_fee"
+                    android:tint="@color/color1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="交卡费"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/net_fee"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/net_fee"
+                    android:tint="@color/color2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="交网费"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/electric_fee"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/electric_fee"
+                    android:tint="@color/color3"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="交电费"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:clickable="false"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/card_lost"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:clickable="false"
+                    android:background="@null"
+                    android:padding="14dp"
+                    android:src="@drawable/card_lost"
+                    android:tint="@color/color4"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:clickable="false"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:clickable="false"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="失卡招领"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:clickable="false"
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_register"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:clickable="false"
+                    android:background="@null"
+                    android:padding="14dp"
+                    android:src="@drawable/card_register"
+                    android:tint="@color/color5"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:clickable="false"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:clickable="false"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="失卡登记"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:clickable="false"
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loss_report"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:clickable="false"
+                    android:background="@null"
+                    android:padding="14dp"
+                    android:src="@drawable/loss_report"
+                    android:tint="@color/color6"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:clickable="false"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:clickable="false"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="挂失解挂"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:clickable="false"
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pwd_alter"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/pwd_alter"
+                    android:tint="@color/color7"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="密码修改"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

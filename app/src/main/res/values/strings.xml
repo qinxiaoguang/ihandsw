@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">掌动山威</string>
+
+    <!--SplashActivity-->
+    <string name="splash_step_out">跳过</string>
+    <string name="splash_info">Sduwh in Hand</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="electric_op_tips">电费操作提示：\n1.请在6:00 至 22:00缴费，其他时间由于一卡通系统日结不允许交易\n2. 首先选择楼栋号\n3. 填写房间号。房间号编号规则：楼栋号（1-2位）+楼分区号（1位不分区写0）+楼层号（1位），房间号（3位）。例如9号楼1区407房间的编号为914007。8号楼102房间编号为801002。11号楼407房间的编号为1104007。</string>
+</resources>

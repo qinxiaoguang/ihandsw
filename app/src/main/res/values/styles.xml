@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="ActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="NoStatusBarTheme" parent="ActivityTheme">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!--点击波纹-->
+    <style name="CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_click</item>
+    </style>
+
+    <style name="LoginClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/login_click</item>
+    </style>
+
+
+    <style name="LoginBtn" parent="Theme.AppCompat.DayNight">
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="colorButtonNormal">#743bc4</item>
+    </style>
+
+    <style name="ConfirmBtn" parent="Theme.AppCompat.DayNight">
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="colorButtonNormal">@color/btn_color_blue</item>
+    </style>
+
+    <style name="DialogActivity" parent="@style/Theme.AppCompat.DayNight.Dialog">
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="FullScreenDialog">
+        <item name="android:windowBackground">@color/full_screen_color</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+
+    <!--主页的四个按钮-->
+    <style name="Card1CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/card1_common_click</item>
+    </style>
+
+    <style name="Card2CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/card2_common_click</item>
+    </style>
+
+    <style name="Card3CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/card3_common_click</item>
+    </style>
+
+    <style name="Card4CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/card4_common_click</item>
+    </style>
+
+</resources>

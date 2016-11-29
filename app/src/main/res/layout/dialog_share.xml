@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/share2friend"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:tint="@color/color7"
+            android:padding="14dp"
+            android:layout_width="56dp"
+            android:src="@drawable/umeng_socialize_wechat"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/text_color"
+                android:text="分享给好友"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <View
+                android:layout_alignParentBottom="true"
+                android:background="#ccc"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/share2quan"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:tint="@color/color1"
+            android:padding="14dp"
+            android:layout_width="56dp"
+            android:src="@drawable/umeng_socialize_wxcircle"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/text_color"
+                android:text="分享到朋友圈"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:background="#ccc"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

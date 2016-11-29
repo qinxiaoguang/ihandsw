@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/login_back"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:id="@+id/notice"
+            android:gravity="center"
+            android:textColor="@color/ccc"
+            android:textSize="16sp"
+            android:text="用户已过期，请验证"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ProgressBar
+            android:id="@+id/load_check"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/checkImg"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/check_input"
+        android:hint="请输入验证码"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:maxLength="4"
+        android:inputType="number"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <RelativeLayout
+        android:id="@+id/login2check"
+        android:theme="@style/LoginClick"
+        android:background="@drawable/login_back"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/check_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/check_btn_text"
+            android:textSize="14sp"
+            android:text="验证"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</LinearLayout>

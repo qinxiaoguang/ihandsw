@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ActivityTheme-v21-->
+    <style name="ActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- 允许使用transitions -->
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_ripple</item>
+    </style>
+
+    <style name="LoginClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_ripple</item>
+    </style>
+
+
+    <!--主页的四个按钮-->
+    <style name="Card1CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_ripple</item>
+    </style>
+
+    <style name="Card2CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_ripple</item>
+    </style>
+
+    <style name="Card3CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_ripple</item>
+    </style>
+
+    <style name="Card4CommonClick" parent="Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/common_ripple</item>
+    </style>
+</resources>

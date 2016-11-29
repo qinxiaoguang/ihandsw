@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="释放座位"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <View
+        android:background="@color/ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="8dp"
+                android:id="@+id/notice"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="错误提示消息"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/release_seat_btn"
+                android:text="释放座位"
+                android:theme="@style/ConfirmBtn"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

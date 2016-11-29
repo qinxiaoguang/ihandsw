@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:inputType="numberPassword"
+        android:id="@+id/old_pwd"
+        android:gravity="center"
+        android:padding="2dp"
+        android:background="@drawable/square_edit_back"
+        android:hint="请输入旧密码"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <EditText
+        android:inputType="numberPassword"
+        android:id="@+id/new_pwd"
+        android:hint="请输入新密码"
+        android:gravity="center"
+        android:padding="2dp"
+        android:background="@drawable/square_edit_back"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <EditText
+        android:inputType="numberPassword"
+        android:id="@+id/confirm_pwd"
+        android:hint="确认新密码"
+        android:gravity="center"
+        android:padding="2dp"
+        android:background="@drawable/square_edit_back"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:id="@+id/err_msg"
+        android:textSize="14sp"
+        android:padding="2dp"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/confirm"
+        android:text="确定"
+        android:theme="@style/ConfirmBtn"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/white">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:transitionName="back"
+            android:background="@drawable/login_back"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Login Please!"
+                android:textColor="#ccc"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/dismiss"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/x"
+                android:padding="12dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_margin="12dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="学号"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/user_layout"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:background="@drawable/login_edit_back"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="45dp">
+                <ImageView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/userid"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+                <EditText
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:id="@+id/userid"
+                    android:hint="请输入学号"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="密码"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/pwd_layout"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:background="@drawable/login_edit_back"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="45dp">
+                <ImageView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/password"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+                <EditText
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:id="@+id/password"
+                    android:hint="请输入查询密码"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/see_pwd"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/see_pwd"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:background="@drawable/login_edit_back"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_margin="4dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp">
+
+                    <ProgressBar
+
+                        android:id="@+id/check_img_loading"
+                        android:layout_centerInParent="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/checkImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/check"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:hint="请输入验证码"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/red"
+                android:text="输入的信息有误"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/rememberPwd"
+                android:layout_margin="2dp"
+                android:layout_gravity="right"
+                android:text="记住密码?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:text="登录"
+                    android:textColor="@color/white"
+                    android:theme="@style/LoginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progress_bar"
+                    android:layout_centerInParent="true"
+                    android:elevation="100dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

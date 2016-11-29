@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginTop="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+        android:id="@+id/p"
+        app:rcIconSrc="@drawable/seat_info"
+        app:rcIconSize="40dp"
+        app:rcIconPadding="8dp"
+        app:rcIconBackgroundColor="@color/icon_back"
+        app:rcRadius="8dp"
+        app:rcMax = "100.0"
+        app:rcProgress="100.0"
+        app:rcBackgroundPadding="4dp"
+        app:rcBackgroundColor="@color/cost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tl"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="48dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tr"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>

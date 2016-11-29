@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    android:id="@+id/umeng_comm_notification"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="?attr/umeng_comm_active_user_card_bg"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <ImageView
+    android:id="@+id/umeng_comm_item_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:src="?attr/umeng_comm_notification_icon" />
+
+    <TextView
+    android:id="@+id/umeng_comm_my_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/umeng_comm_dimen_24px"
+    android:layout_toRightOf="@id/umeng_comm_item_icon"
+    android:gravity="center"
+    android:text="@string/umeng_comm_user_notification"
+        android:textColor="?attr/umeng_comm_album_text"
+    android:textSize="@dimen/text_big18_size" />
+
+    <View
+    android:id="@+id/umeng_comm_notify_badge_view"
+    android:layout_width="@dimen/umeng_comm_dimen_12px"
+    android:layout_height="@dimen/umeng_comm_dimen_12px"
+    android:layout_marginLeft="@dimen/umeng_comm_dimen_12px"
+    android:layout_marginTop="@dimen/umeng_comm_dimen_18px"
+    android:layout_toRightOf="@id/umeng_comm_my_tv"
+        android:visibility="gone"
+    android:background="?attr/umeng_comm_red_point" />
+
+    <View
+    android:layout_width="@dimen/umeng_comm_dimen_18px"
+    android:layout_height="@dimen/umeng_comm_dimen_30px"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    android:background="?attr/umeng_comm_right_arrow" />
+        <include layout="@layout/umeng_comm_divide_line"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/umeng_comm_dimen_1px" />
+    </RelativeLayout>
+</LinearLayout>

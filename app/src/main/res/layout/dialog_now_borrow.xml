@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="当前借阅"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+    <View
+        android:background="@color/ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/loading_now_borrow"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/notice"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/ccc_plus"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:text="您当前没有借阅的图书"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/check_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/check_name_tv"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/ccc_plus"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:text="您第一次登录，需要核实您的姓名，请点击下方按钮登录官网核实"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/stepToCheck"
+                android:text="核实姓名"
+                android:layout_marginTop="8dp"
+                android:theme="@style/ConfirmBtn"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/now_borrow_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

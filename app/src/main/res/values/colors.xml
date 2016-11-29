@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3B393A</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryTransparent">#a0ff5722</color>
+
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_notall">#98000000</color>
+    <color name="transparent_notall_white">#b2ffffff</color>
+    <color name="yellow">#f2ea03</color>
+    <color name="ccc">#f0f0f0</color>
+    <color name="ccc_plus">#aaaaaa</color>
+    <color name="red">#fa0000</color>
+    <color name="gray">#767676</color>
+    <color name="wraning">#cc2941</color>
+    <color name="login_input_click">#30194D</color>
+
+    <color name="tmp">#fe216c</color>
+
+    <color name="pwd_table_color">#FEFEFE</color>
+
+    <color name="text_color">#8E8E8E</color>
+
+    <color name="card1">#F6A029</color>
+    <color name="card2">#EE612B</color>
+    <color name="card3">#2FB583</color>
+    <color name="card4">#507ECC</color>
+
+    <color name="login_btn">#743bc4</color>
+
+    <color name="btn_color_blue">#0FACF3</color>
+
+
+    <color name="color1">#FE590E</color>
+    <color name="color2">#E9A63B</color>
+    <color name="color3">#297DDE</color>
+    <color name="color4">#DE392B</color>
+    <color name="color5">#6E6EC5</color>
+    <color name="color6">#3A78CF</color>
+    <color name="color7">#01B73B</color>
+
+    <color name="cost">#3B393A</color>
+    <color name="icon_back">#0099CC</color>
+
+    <color name="full_screen_color">#464344</color>
+
+    <color name="night">#303030</color>
+
+
+
+
+</resources>

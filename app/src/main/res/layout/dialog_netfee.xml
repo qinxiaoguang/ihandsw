@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginBottom="8dp"
+        android:id="@+id/net_fee_balance"
+        android:text="网费余额"
+        android:textColor="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/net_fee_num"
+        android:hint="请输入缴费金额"
+        android:gravity="center"
+        android:padding="2dp"
+        android:background="@drawable/login_edit_back"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <EditText
+        android:background="@drawable/login_edit_back"
+        android:id="@+id/queryPwd"
+        android:hint="请输入查询密码"
+        android:inputType="numberPassword"
+        android:maxLength="6"
+        android:gravity="center"
+        android:padding="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/errMsg"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="出错信息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:text="缴费"
+        android:layout_marginTop="8dp"
+        android:theme="@style/ConfirmBtn"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

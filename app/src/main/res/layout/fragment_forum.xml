@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qxg"
+    tools:context="com.qxg.ihandsw.view.Home.Fragments.forum.Impl.ForumFragment">
+
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="您可以在这里任意吐槽" />
+
+    <TextView
+        android:id="@+id/get_in"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/notice"
+        android:text="点击进入"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

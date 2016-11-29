@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+
+
+    <EditText
+        android:background="@drawable/square_edit_back"
+        android:hint="请输入丢卡地点"
+        android:id="@+id/address"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <EditText
+        android:background="@drawable/square_edit_back"
+        android:id="@+id/phone"
+        android:hint="联系电话"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+    <EditText
+        android:background="@drawable/square_edit_back"
+        android:id="@+id/des"
+        android:hint="请输入说明信息"
+        android:gravity="top"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="96dp" />
+
+    <TextView
+        android:id="@+id/err_msg"
+        android:text="错误信息"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:text="提交"
+        android:theme="@style/ConfirmBtn"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

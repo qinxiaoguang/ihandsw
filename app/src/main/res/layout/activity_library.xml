@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qxg.ihandsw.view.Card.Impl.CardActivity">
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:orientation="vertical"
+        android:transitionName="card1"
+        android:background="@color/card2"
+        android:paddingTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:titleTextColor="@color/black"
+            android:layout_height="?attr/actionBarSize">
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/ccc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:text="图书馆座位系统"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/query_seat_info"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/seat_info"
+                    android:tint="@color/color1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="座位情况"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/order_seat"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/seat_order"
+                    android:tint="@color/color2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="预约座位"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/release_seat"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/release_seat"
+                    android:tint="@color/card3"
+                    android:paddingRight="2dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="释放座位"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/change_pwd"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/pwd_alter"
+                    android:tint="@color/color3"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="密码修改"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:background="@color/ccc_plus"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"/>
+            <LinearLayout
+                android:background="@color/ccc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:text="图书馆图书系统"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_book"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/book_search"
+                    android:tint="@color/color4"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="查找书籍"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="0.2dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/now_borrow"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/mg_borrow"
+                    android:tint="@color/color5"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="当前借阅"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="#ccc"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="0.2dp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/book_change_pwd"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/pwd_alter"
+                    android:tint="@color/color7"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="密码修改"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:background="@color/ccc_plus"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"/>
+            <View
+                android:background="@color/ccc"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
