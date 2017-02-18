@@ -4,7 +4,7 @@ apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.qxg.ihandsw"
         minSdkVersion 16
@@ -19,6 +19,7 @@ android {
         preDexLibraries = false
     }
 
+    /*
     signingConfigs {
         release {
             storeFile file("ihandsw.jks")
@@ -27,17 +28,23 @@ android {
             keyPassword "a123456"
         }
     }
+    签名信息
+    */
 
     buildTypes {
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            //signingConfig signingConfigs.release
         }
+        /*
         release {
             minifyEnabled false
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        发型版本
+        */
     }
 
 }
