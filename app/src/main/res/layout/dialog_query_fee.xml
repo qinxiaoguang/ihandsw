@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/today_query"
+        android:text="当日流水查询"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <View
+        android:background="#e2e2e2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/three_day_query"
+        android:text="前三日流水查询(不包括今日)"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <View
+        android:background="#e2e2e2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/seven_day_query"
+        android:text="前七日流水查询(不包括今日)"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+
+</LinearLayout>

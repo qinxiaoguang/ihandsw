@@ -14,6 +14,7 @@ import com.qxg.ihandsw.view.Card.ICardView;
 import com.qxg.ihandsw.widget.CardWidget.BaseBottomDialog;
 import com.qxg.ihandsw.widget.CardWidget.CardFeeDialog;
 import com.qxg.ihandsw.widget.CardWidget.ChangePwdDialog;
+import com.qxg.ihandsw.widget.CardWidget.ChoseQueryFee;
 import com.qxg.ihandsw.widget.CardWidget.ElectricFeeDialog;
 import com.qxg.ihandsw.widget.CardWidget.LossCardInfoDialog;
 import com.qxg.ihandsw.widget.CardWidget.LossOrUnlossDialog;
@@ -132,7 +133,7 @@ public class CardActivity extends BaseActivity implements ICardView {
     }
 
 
-    @OnClick({R.id.card_fee, R.id.net_fee, R.id.electric_fee, R.id.card_lost, R.id.card_register, R.id.loss_report, R.id.pwd_alter})
+    @OnClick({R.id.card_fee, R.id.net_fee, R.id.electric_fee, R.id.card_lost, R.id.card_register, R.id.loss_report, R.id.pwd_alter,R.id.fee_query})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.card_fee:
@@ -156,6 +157,10 @@ public class CardActivity extends BaseActivity implements ICardView {
                 break;
             case R.id.pwd_alter:
                 showBottomDialog(new ChangePwdDialog(this,ChangePwdDialog.CARD_CHANGE_PWD));
+                break;
+            case R.id.fee_query:
+                //蹦出来选项，当日查询，3天查询，7天查询等选项。
+                showBottomDialog(new ChoseQueryFee(this));
                 break;
         }
     }

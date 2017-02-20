@@ -3,11 +3,12 @@ package com.qxg.ihandsw.model;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.qxg.ihandsw.utils.Log;
 
 import com.qxg.ihandsw.Config;
 import com.qxg.ihandsw.model.bean.LossCard;
+import com.qxg.ihandsw.model.bean.QueryFee;
 import com.qxg.ihandsw.retrofit.service.LossCardService;
+import com.qxg.ihandsw.utils.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,7 +18,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -995,6 +998,111 @@ public class CardModel {
             }
         });
 
+    }
+
+    public interface onQueryFeeListener{
+        public void onStart();
+        public void onSucess(List<QueryFee> feeLists);
+        public void empty();
+
+    }
+
+    public List<QueryFee> feeLists;
+    public int pageSum;
+
+    private onQueryFeeListener onQueryFeeListener;
+
+    public void setOnQueryFeeListener(CardModel.onQueryFeeListener onQueryFeeListener) {
+        this.onQueryFeeListener = onQueryFeeListener;
+    }
+
+    public void queryFee(final int day, final int index){
+        String url = "";
+        if(day == 1){
+            //查询当日流水
+            url = "http://iecard.wh.sdu.edu.cn/CardManage/CardInfo/TrjnList?type=0&_=" + System.currentTimeMillis();
+        }else{
+            //查询3日流水
+            Calendar calendar   =   Calendar.getInstance();
+            calendar.add(Calendar.DATE,-(day + 1));
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String beginTime = sdf.format(calendar.getTime());
+
+            calendar.add(Calendar.DATE,3);
+            String endTime = sdf.format(calendar.getTime());
+            url = "http://iecard.wh.sdu.edu.cn/CardManage/CardInfo/TrjnList?"
+                    + "beginTime=" + beginTime
+                    + "&endTime=" + endTime
+                    +"&type=1&_=" + System.currentTimeMillis()
+                    +"&pageindex=" + index;
+            Log.i("----->url",url);
+        }
+
+        if(index == 1){
+            feeLists = new ArrayList<>();
+        }
+
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Cookie",getNeedCookie())
+                .build();
+        if( onQueryFeeListener!= null)onQueryFeeListener.onStart();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String reslut = response.body().string();
+                Log.i("------>",reslut);
+                Document doc = Jsoup.parse(reslut);
+                //doc 里面获取input，所有值都在input里面
+                Elements ems = doc.select("tbody");
+                Elements tr = ems.get(0).select("tr");
+                //第一个tr是记录查询，其余的tr才是消费记录
+                if(index == 1){
+                    //如果index是1，需要计算pageSum
+                    Element record = tr.get(0).select("td").get(0);
+                    String recordString = record.text();
+                    Log.i("-------->流水记录头部查询",recordString);
+                    String[] ss = recordString.split("：");
+                    String sss = ss[ss.length - 1];
+                    if(sss.equals("当前查询条件内没有流水记录")){
+                        //如果没有记录，直接显示没记录
+                        if(onQueryFeeListener != null)onQueryFeeListener.empty();
+                        return;
+                    }
+                    int recordSum = Integer.parseInt(sss);
+                    pageSum = (recordSum-1)/10 + 1;
+                }
+
+                //接着记录其他数据
+                for(int i=1; i<tr.size();i++){
+                    Elements td = tr.get(i).select("td");
+                    //第一个td是时间
+                    QueryFee qf = new QueryFee();
+                    qf.setDate(td.get(0).text());
+                    qf.setName(td.get(1).text());
+                    qf.settName(td.get(2).text());
+                    qf.setMoneyCount(td.get(3).select("span").get(0).text());
+                    qf.setRemain(td.get(4).select("span").get(0).text());
+
+                    feeLists.add(qf);
+                }
+                //记录完毕后，加载额外的页码的记录
+                if(index < pageSum){
+                    queryFee(day,index+1);
+                }else{
+                    //如果相等，说明加载完毕，这个时候，把feeLists导出去
+                    if(onQueryFeeListener != null){
+                        onQueryFeeListener.onSucess(feeLists);
+                    }
+                }
+
+            }
+        });
     }
 
     private String getJustCookie(){

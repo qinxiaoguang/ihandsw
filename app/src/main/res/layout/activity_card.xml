@@ -185,6 +185,31 @@
                         android:layout_height="match_parent" />
                 </RelativeLayout>
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fee_query"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <ImageView
+                    android:padding="14dp"
+                    android:src="@drawable/electric_fee"
+                    android:tint="@color/color7"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+                    <TextView
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:text="流水查询"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
 
 
