@@ -565,10 +565,10 @@ public class CardModel {
     public void transElectricFee(int buildNum, String roomNum, final String feeAccount){
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
-                .add("payTypeCodes","Luwei")
-                .addEncoded("xiaoqu","主校区++++++++++++++++++++++++")
-                .addEncoded("buildno",buildNum + "++++++++")
-                .add("roomno",roomNum)
+                .add("PayTypeCodes","Luwei")
+                .addEncoded("XiaoQu","主校区++++++++++++++++++++++++")
+                .addEncoded("buildnum",buildNum + "++++++++")
+                .add("roomnum",roomNum)
                 .add("txtPowerFeeAmount",feeAccount)
                 .add("showBuild","True")
                 .add("buildName",buildNum+"")
