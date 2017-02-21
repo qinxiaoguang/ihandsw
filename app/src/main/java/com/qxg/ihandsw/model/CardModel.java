@@ -1028,7 +1028,7 @@ public class CardModel {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             String beginTime = sdf.format(calendar.getTime());
 
-            calendar.add(Calendar.DATE,3);
+            calendar.add(Calendar.DATE,day);
             String endTime = sdf.format(calendar.getTime());
             url = "http://iecard.wh.sdu.edu.cn/CardManage/CardInfo/TrjnList?"
                     + "beginTime=" + beginTime
