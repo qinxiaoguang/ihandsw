@@ -345,14 +345,21 @@ public class LibraryModel {
                 if(m.find()){
                     String tmp = m.group(0); //总数据
                     Log.i("---->匹配数据",tmp);
-                    String tmps[] = tmp.split("],"); //前12个有用
-                    for(int i=0;i<12;i++){
+                    String tmps[] = tmp.split("],"); //前12个有用,也可能是11个，也可能是2个.....
+                    int size = tmps.length;
+                    for(int i=0;i<size;i++){
                         String splitTmps[] = tmps[i].split(",");
+                        Log.i("--->长度",splitTmps.length + "");
+                        if(splitTmps.length != 9)continue;
+
                         String roomId = splitTmps[0].substring(2,8);//roomId;
                         String floor = splitTmps[1].substring(1,splitTmps[1].length()-1);
                         String all = splitTmps[3].substring(1,splitTmps[3].length()-1);
                         String rest = splitTmps[4].substring(1,splitTmps[4].length()-1);
-                        floorInfos.add(new OrderFloorInfo(roomId,floor,date,all,rest));
+                        String param = splitTmps[5].split("\\?")[1];
+                        param = param.substring(0,param.length() - 5);
+                        Log.i("params -->" ,param);
+                        floorInfos.add(new OrderFloorInfo(roomId,floor,date,all,rest,param));
                         Log.i("获取的item数据：",roomId + "," + floor + "," + all + "," + rest);
                     }
                 }

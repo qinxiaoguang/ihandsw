@@ -48,6 +48,7 @@ public class ShowWebViewActivity extends AppCompatActivity {
     public static final int LOAD_UN_ORDER = -1;
     public static int floor;
     private String roomId;
+    private String param;
     private String date;
     private WebView webView;
 
@@ -71,6 +72,7 @@ public class ShowWebViewActivity extends AppCompatActivity {
         if(flag == LOAD_ORDER){
             roomId = intent.getStringExtra("roomId");
             date = intent.getStringExtra("date");
+            param = intent.getStringExtra("param");
         }
         initView();
     }
@@ -117,6 +119,7 @@ public class ShowWebViewActivity extends AppCompatActivity {
                 loading.setVisibility(View.VISIBLE);
                 webView.animate().alpha(0.2f).setDuration(1000).start();
                 super.onPageStarted(view, url, favicon);
+                Log.i("访问的网站是--->",url);
             }
 
             @Override
@@ -131,8 +134,8 @@ public class ShowWebViewActivity extends AppCompatActivity {
         if (flag == LOAD_ORDER){
             //加载预约界面
             //http://202.194.46.22/FunctionPages/SeatBespeak/BespeakSeatLayout.aspx?roomId=000103&date=63614246400000000,
-            Log.i("---->将要加载的页面是",Config.ORDER_ITEM_BASE_URL+"?roomId="+roomId+"&date=" + date);
-            webView.loadUrl(Config.ORDER_ITEM_BASE_URL+"?roomId="+roomId+"&date=" + date,headers);
+            Log.i("---->将要加载的页面是",Config.ORDER_ITEM_BASE_URL+"?" + param);
+            webView.loadUrl(Config.ORDER_ITEM_BASE_URL+"?"+param,headers);
         }else if(flag == LOAD_UN_ORDER){
             webView.loadUrl(Config.ORDER_RECORD_ADDRESS,headers);
         }

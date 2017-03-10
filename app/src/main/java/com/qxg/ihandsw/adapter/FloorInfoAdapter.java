@@ -55,6 +55,7 @@ public class FloorInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 intent.putExtra("flag",ShowWebViewActivity.LOAD_ORDER);
                 intent.putExtra("roomId",info.roomId);
                 intent.putExtra("date",info.date);
+                intent.putExtra("param",info.param);
                 activity.startActivity(intent);
                 //new ShowWebViewDialog(activity,ShowWebViewDialog.LOAD_ORDER,info.roomId,info.date).initView().show();
                 if(dialog!=null)dialog.dismiss();
