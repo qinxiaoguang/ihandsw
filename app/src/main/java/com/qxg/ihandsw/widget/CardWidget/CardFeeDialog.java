@@ -214,6 +214,7 @@ public class CardFeeDialog extends BaseBottomDialog {
     @OnClick(R.id.confirm_trans_btn)
     public void confirm() {
         //确定缴费
+        confirmBtn.setClickable(false);
         String pwd = pwdEdit.getText().toString();
         String tranNum = transFee.getText().toString();
 
@@ -259,6 +260,7 @@ public class CardFeeDialog extends BaseBottomDialog {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
+                        confirmBtn.setClickable(true);
                         if (msg.equals("验证码错误")) {
 
                             ShowCheckDialog showCheckDialog = ShowCheckDialog.newInstance();

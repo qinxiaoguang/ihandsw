@@ -42,7 +42,7 @@ public class Config {
 
     public static final String OFFICE_NOTIFY_URL = "http://jwc.wh.sdu.edu.cn/articleList_nologin.do?article.columnlsh=60";
 
-    public static final String TERM_DATE="http://www.wh.sdu.edu.cn/html/xiaoli/";  //学期校历
+    public static final String TERM_DATE="https://www.wh.sdu.edu.cn/html/xiaoli/";  //学期校历
     public static final String TERM_DATE_IMG_URL = "http://www.wh.sdu.edu.cn/images/xiaoli/";
 
     public static final String RELEASE_SEAT_URL = "http://yuyue.juneberry.cn/MainFunctionPage.aspx";

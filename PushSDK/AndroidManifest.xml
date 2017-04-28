@@ -23,7 +23,6 @@
 
     <application>
 
-        <!--
         <service
             android:name="com.taobao.accs.ChannelService"
             android:exported="true"
@@ -35,7 +34,7 @@
                 <action android:name="com.taobao.accs.intent.action.ELECTION" />
             </intent-filter>
         </service>
-        -->
+
 
         <service
             android:name="com.taobao.accs.data.MsgDistributeService"

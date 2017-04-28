@@ -3,6 +3,9 @@ package com.qxg.ihandsw.presenter.Home.Fragments.home.Impl;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.LruCache;
 
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.flaviofaria.kenburnsview.Transition;
@@ -49,10 +52,12 @@ public class FragmentHomePresenter extends BasePresenter implements IFragmentHom
             R.drawable.bp22,
             R.drawable.bp23
     };
+    LruCache<Integer,Bitmap> bitmapCache;  //cache
 
 
     @Inject
     public FragmentHomePresenter(Activity activity){
+        bitmapCache = new LruCache<>(8);
         this.activity = activity;
     }
 
@@ -80,7 +85,13 @@ public class FragmentHomePresenter extends BasePresenter implements IFragmentHom
                         //替换照片
                         images.pause();
                         int random = (int)(Math.random()*imagesRes.length);
-                        images.setImageResource(imagesRes[random]);
+                        Bitmap bitmap = bitmapCache.get(random);
+                        if(bitmap == null){
+                            bitmap = BitmapFactory.decodeResource(activity.getResources(),imagesRes[random]);
+                            bitmapCache.put(random,bitmap);
+                        }
+                        images.setImageBitmap(bitmap);
+                        /*images.setImageResource(imagesRes[random]);*/
                         images.resume();
                         ValueAnimator animator1 = ValueAnimator.ofFloat(0f,1f);
                         animator1.setDuration(500);

@@ -122,6 +122,7 @@ public class SmallToolModel {
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
         final String url = Config.TERM_DATE + year + "-1.html";
+        System.out.println(url);
         new Thread(new Runnable() {
             @Override
             public void run() {
